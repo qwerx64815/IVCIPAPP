@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">"智慧語音平台"</string>
+    <string name="title_sensor_h">Sensor</string>
+    <string name="title_actuator_h">Actuator</string>
+    <string-array name="Show">
+        <item>依數值類型顯示</item>
+        <item>依資料格式顯示</item>
+    </string-array>
+    <string-array name="sensor_Topic">
+        <item>請選擇主題</item>
+        <item>topic1</item>
+        <item>topic2</item>
+    </string-array>
+    <string-array name="sensor_ChartType">
+        <item>請選擇報表類型</item>
+        <item>日報表</item>
+        <item>月報表</item>
+        <item>年報表</item>
+    </string-array>
+    <string-array name="LED">
+        <item>請選擇主題</item>
+        <item>Actuator</item>
+        <item>led1</item>
+        <item>led2</item>
+    </string-array>
+    <string-array name="YEAR">
+        <item>請選擇年份</item>
+        <item>2019</item>
+        <item>2018</item>
+    </string-array>
+    <string-array name="MONTH">
+        <item>請選擇月份</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+    <string-array name="LEDPIC">
+        <item>請選擇主題</item>
+        <item>led</item>
+        <item>led1</item>
+        <item>led2</item>
+    </string-array>
+    <string-array name="wisdom_home_topic">
+        <item>請選擇主題</item>
+        <item>PMS</item>
+        <item>pms1</item>
+    </string-array>
+</resources>

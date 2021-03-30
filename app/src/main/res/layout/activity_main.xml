@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/main_bg"
+        android:scaleType="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/TopIPArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/IPAreaBG"
+        android:paddingBottom="10dp"
+        app:layout_constraintVertical_weight="1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/BottomBtnArea"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/HostEditArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" >
+
+            <AutoCompleteTextView
+                android:id="@+id/HostEditText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="5dp"
+                android:hint="請輸入 IP 位址"
+                android:inputType="text"
+                android:lines="1"
+                android:maxLength="15"
+                android:text="192.168.1.100"
+                android:textSize="26sp"
+                android:padding="10dp"
+                android:background="@drawable/edittext_bg"
+                app:layout_constraintHorizontal_weight="4"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/imgBtn_Clear_Host"/>
+
+            <ImageView
+                android:id="@+id/imgBtn_Clear_Host"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/delete_text"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/HostEditText"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <AutoCompleteTextView
+            android:id="@+id/MQTTPortEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginBottom="25dp"
+            android:hint="MQTT"
+            android:inputType="number"
+            android:text="1883"
+            android:textSize="20sp"
+            android:maxLength="5"
+            android:lines="1"
+            android:padding="10dp"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintTop_toBottomOf="@+id/HostEditArea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/imgBtn_Clear_MQTTPort"/>
+
+        <ImageView
+            android:id="@+id/imgBtn_Clear_MQTTPort"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/delete_text"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/HostEditArea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/MQTTPortEditText"
+            app:layout_constraintRight_toLeftOf="@+id/SQLPortEditText"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/SQLPortEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="25dp"
+            android:hint="SQL"
+            android:text="1880"
+            android:inputType="number"
+            android:textSize="20sp"
+            android:maxLength="5"
+            android:lines="1"
+            android:padding="10dp"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintTop_toBottomOf="@+id/HostEditArea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imgBtn_Clear_MQTTPort"
+            app:layout_constraintRight_toLeftOf="@+id/imgBtn_Clear_SQLPort"/>
+
+        <ImageView
+            android:id="@+id/imgBtn_Clear_SQLPort"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/delete_text"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/HostEditArea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/SQLPortEditText"
+            app:layout_constraintRight_toLeftOf="@+id/SpeechPortEditText"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/SpeechPortEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="25dp"
+            android:hint="Speech"
+            android:text="50051"
+            android:inputType="number"
+            android:textSize="20sp"
+            android:maxLength="5"
+            android:lines="1"
+            android:padding="10dp"
+            android:background="@drawable/edittext_bg"
+            app:layout_constraintHorizontal_weight="2"
+            app:layout_constraintTop_toBottomOf="@+id/HostEditArea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/imgBtn_Clear_SQLPort"
+            app:layout_constraintRight_toLeftOf="@+id/imgBtn_Clear_SpeechPort"/>
+
+        <ImageView
+            android:id="@+id/imgBtn_Clear_SpeechPort"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/delete_text"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/HostEditArea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/SpeechPortEditText"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:id="@+id/BottomBtnArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintVertical_weight="3"
+        app:layout_constraintTop_toBottomOf="@+id/TopIPArea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="30dp">
+
+            <Button
+                android:id="@+id/DashBoardClick"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_margin="35dp"
+                android:background="@drawable/dashboard_btn"
+                android:onClick="DashBoardClick"
+                android:padding="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/ControllerClick"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_margin="35dp"
+                android:background="@drawable/controller_btn"
+                android:onClick="ControllerClick"
+                android:padding="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DashBoardClick" />
+
+            <Button
+                android:id="@+id/ChartClick"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:layout_margin="35dp"
+                android:background="@drawable/chart_btn"
+                android:onClick="ChartClick"
+                android:padding="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ControllerClick" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#333842</color>
+    <color name="colorPrimaryDark">#333842</color>
+    <color name="colorAccent">#d2be2292</color>
+
+    <color name="TopBarLight">#3a404b</color>
+    <color name="TabBarLight">#3a404b</color>
+    <color name="WaterListViewBG">#BE61BAF6</color>
+    <color name="HomeListViewBG">#BEBE7128</color>
+    <color name="MainContent">#DFFCE6</color>
+    <color name="IPAreaBG">#3A404B</color>
+    <color name="HomeFontColor">#B99572</color>
+    <color name="TabFontColor">#F0EDED</color>
+</resources>

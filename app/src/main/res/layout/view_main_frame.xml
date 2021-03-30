@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainframelayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Area -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/TopArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/BottomArea"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_weight="1">
+
+        <!-- Button Area -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/TopBtnArea"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/TopBarLight"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/Tabs"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_weight="1">
+
+            <!-- Back Button -->
+            <ImageButton
+                android:id="@+id/BackPrePage_btn"
+                android:layout_width="85dp"
+                android:layout_height="25dp"
+                android:layout_margin="15dp"
+                android:background="@drawable/backbtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/PageClassNameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="23sp"
+                android:textColor="@color/TabFontColor"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <!-- Info Button -->
+            <ImageButton
+                android:id="@+id/Info_btn"
+                android:layout_width="100dp"
+                android:layout_height="45dp"
+                android:layout_margin="15dp"
+                android:visibility="invisible"
+                android:background="@drawable/infobtn"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Tab Area -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/Tabs"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/TabBarLight"
+            app:tabTextColor="@color/TabFontColor"
+            app:tabTextAppearance="@style/CustomTabText"
+            app:layout_constraintTop_toBottomOf="@+id/TopBtnArea"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintVertical_weight="1"
+            app:tabMode="scrollable" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Bottom Area -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BottomArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/IPAreaBG"
+        app:layout_constraintTop_toBottomOf="@+id/TopArea"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_weight="5" >
+
+        <!-- Page Area -->
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/Container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/MainContent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/SpeechArea"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_weight="10" />
+
+        <!-- Speech Area -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/SpeechArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/Container"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
