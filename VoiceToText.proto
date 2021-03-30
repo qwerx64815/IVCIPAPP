@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package VoiceToText;
+
+service Text {
+  rpc ShowText (TextRequest) returns (command_list) {}
+}
+
+message TextRequest {
+  string text = 1;
+}
+
+message command_list {
+  string data = 1;
+}
+
+
